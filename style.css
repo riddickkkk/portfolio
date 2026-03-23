@@ -1,0 +1,74 @@
+/*Nav Bar*/
+.navbar {
+    display: flex;                  /* enable flexbox */
+    justify-content: space-between; /* spread items left and right */
+    align-items: center;            /* vertically center items */
+    background-color: #4B5320;      /* army green */
+    padding: 8px 20px;              /* thinner spacing */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.menu-icon {
+    background: none;          /* no background */
+    border: none;              /* remove default border */
+    font-size: 20px;           /* size of ☰ icon */
+    color: #fff;               /* white icon */
+    cursor: pointer;           /* pointer on hover */
+    padding: 5px 10px;         /* smaller spacing */
+}
+
+/* Home button */
+.home-btn {
+    background-color: #4B5320; /* Army Green */
+    color: #fff;               /* white text */
+    border: none;              /* clean look */
+    padding: 8px 16px;         /* slimmer height */
+    border-radius: 4px;        /* rounded corners */
+    font-weight: bold;         /* bold text */
+    cursor: pointer;           /* pointer on hover */
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #3e4420; /* darker green on hover */
+}
+.profile {
+    text-align: left;   /* aligns everything to the left */
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse; /* flips the order */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.name {
+    font-size: 32px;           /* big bold name */
+    font-weight: bold;
+    margin-bottom: 10px;       /* space below name */
+    color: #222;               /* dark text */
+}
+
+.title {
+    font-size: 20px;           /* smaller than name */
+    font-weight: 600;
+    margin-bottom: 15px;       /* space below title */
+    color: #4B5320;            /* army green accent */
+}
+
+.description {
+    font-size: 16px;           /* normal readable text */
+    line-height: 1.5;          /* better spacing */
+    color: #333;               /* softer black */
+    max-width: 600px;          /* keeps essay narrow */
+    margin: 0 auto;            /* centers essay block */
+}
