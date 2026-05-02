@@ -278,3 +278,29 @@ body {
         width: 200px;
     }
 }
+/* ===== ABOUT PAGE ONLY ===== */
+.about-page .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* space for navbar */
+    text-align: center;
+}
+
+.about-page .profile {
+    max-width: 800px;
+}
+
+.about-page .name {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.about-page .description {
+    font-size: 18px;
+    padding: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
