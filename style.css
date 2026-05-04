@@ -283,13 +283,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding-top: 80px; /* space for navbar */
+
+    /* FIX for mobile */
+    min-height: 100dvh;
+
+    padding: 100px 15px 20px; /* top, sides, bottom */
     text-align: center;
 }
 
 .about-page .profile {
     max-width: 800px;
+    width: 100%; /* prevents overflow */
 }
 
 .about-page .name {
@@ -303,6 +307,25 @@ body {
     max-width: 700px;
     margin: 0 auto;
     border-radius: 15px;
+
+    /* ADD THIS */
+    line-height: 1.6;
+    width: 100%;
+}
+@media (max-width: 480px) {
+    .about-page .about-section {
+        align-items: flex-start; /* stops vertical squeezing */
+        padding: 90px 10px 20px;
+    }
+
+    .about-page .name {
+        font-size: 24px;
+    }
+
+    .about-page .description {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
 .cert-section {
     text-align: center;
