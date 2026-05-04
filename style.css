@@ -304,3 +304,49 @@ body {
     margin: 0 auto;
     border-radius: 15px;
 }
+.cert-section {
+    text-align: center;
+    padding: 80px 20px;
+    color: #d8ffd8;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.cert-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #7cff7c;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cff7c;
+}
+
+.cert-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cert-card h3 {
+    margin: 10px 0;
+}
+
+.cert-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
