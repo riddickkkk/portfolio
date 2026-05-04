@@ -363,6 +363,11 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.cert-card img:hover {
+    transform: scale(1.1); /* zoom effect */
 }
 
 .cert-card h3 {
@@ -427,3 +432,43 @@ body {
     color: #caffdc;
     letter-spacing: 1px;
   }
+  .cert-card img {
+    width: 300px;      
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .cert-card {
+    width: 420px;            
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cert-card img {
+    width: 100%;               
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* optional hover zoom */
+  .cert-card img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95); /* darker */
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+  
