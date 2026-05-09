@@ -119,8 +119,8 @@ body {
 }
 
 .profile-img {
-    width: 220px;
-    height: 220px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--accent-green);
@@ -171,7 +171,7 @@ body {
 }
 
 .name {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 6px;
     color: var(--white);
@@ -471,4 +471,60 @@ body {
   max-width: 90%;
   max-height: 90%;
 }
-  
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
+    padding-top: 0;            /* remove offset so true centering works */
+    text-align: center;
+}
+
+/* SOCIAL ICON CONTAINER */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+/* SOCIAL LOGOS */
+.social-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.15);
+}
+
+/* LINKEDIN OVERRIDE SIZE */
+.linkedin-logo {
+    width: 180px;
+    height: 180px;
+}
+
+/* DESCRIPTION TEXT */
+.descriptions {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.view-btn {
+    display: inline-block;
+    background-color: #28a745; /* Bootstrap green */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
