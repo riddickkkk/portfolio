@@ -336,6 +336,8 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin: 0 auto;   /* center container */
+    max-width: 900px;
 }
 
 .cert-card {
@@ -343,9 +345,32 @@ body {
     border: 1px solid #7cff7c;
     border-radius: 15px;
     padding: 20px;
-    width: 300px;
-    transition: 0.3s;
+    width: 280px;
+   
+ transition: 0.3s;
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cert-container {
+      max-width: 100%; /* full width on mobile */
+      padding: 5px;
+    }
+  
+    .cert-card {
+      width: 90%; /* shrink card width relative to screen */
+      margin: 0 auto;
+      padding: 10px;
+    }
+  
+    .cert-card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
 
 .cert-card:hover {
     transform: translateY(-10px);
@@ -426,7 +451,7 @@ body {
     letter-spacing: 1px;
   }
   .cert-card img {
-    width: 300px;      
+    width: 260px;      
     height: auto;
     border-radius: 10px;
   }
