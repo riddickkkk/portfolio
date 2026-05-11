@@ -562,6 +562,13 @@ body {
     margin: auto;
   }
   
+  @media (max-width: 600px) {
+  .tech-grid {
+    gap: 50px;
+  }
+}
+
+  
   .tech-item {
     background: rgba(0, 255, 150, 0.05);
     border: 1px solid rgba(0, 255, 150, 0.2);
