@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector('.close');
 
   images.forEach(img => {
-    img.onclick = function() {
-      lightbox.style.display = "block";
-      lightboxImg.src = this.src;
-    };
+   img.onclick = function() {
+  lightbox.style.display = "flex"; 
+  lightboxImg.src = this.src;
+   };
   });
 
   closeBtn.onclick = function() {
