@@ -621,10 +621,18 @@ body {
   }
   
   .about-section h2 {
-    text-align: center;  /* ensures heading text is centered */
-    width: 100%;         /* makes it span full width */
-    margin-bottom: 20px; /* adds spacing below */
-  }
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    color: white;
+    text-shadow: 0 0 15px rgba(170, 255, 120, 0.7);
+}
   
   /* Responsive fix for mobile */
   @media (max-width: 600px) {
