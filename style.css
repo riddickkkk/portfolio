@@ -37,6 +37,7 @@ body {
     background: linear-gradient(90deg, var(--dark-green) 0%, var(--primary-green) 50%, var(--forest-green) 100%);
     padding: 12px 30px;
     position: fixed;
+    flex-wrap: wrap;
     top: 0;
     left: 0;
     width: 100%;
@@ -53,27 +54,94 @@ body {
   .nav-right {
     order: 2; /* ensures it stays on the right */
   }
+  .navbar a {
+  color: #fff;
+}
+.nav-btn:hover {
+  background: var(--accent-green);
+  color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+.nav-btn {
+  color: #fff; /* white text */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-green);
+  transition: all 0.3s ease;
+}
+.nav-left {
+  display: flex;
+  gap: 100px; /* adds space between buttons */
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
 
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
 
-.home-btn {
-    background: linear-gradient(135deg, var(--light-green) 0%, var(--accent-green) 100%);
-    color: var(--white);
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .nav-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--dark-green);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-btn {
+    margin: 10px 0;
     border: none;
-    padding: 10px 24px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+  }
 }
 
-.home-btn:hover {
-    background: linear-gradient(135deg, var(--accent-green) 0%, var(--mint-green) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--shadow);
-}
 
 .user-badge {
     background: linear-gradient(135deg, var(--accent-green) 0%, var(--mint-green) 100%);
@@ -336,6 +404,34 @@ body {
     margin-bottom: 40px;
 }
 
+.image-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: pointer;
+    animation: zoomIn 0.3s ease-in-out;
+}
+ 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+ 
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+ 
 .cert-container {
     display: flex;
     justify-content: center;
@@ -344,7 +440,7 @@ body {
     margin: 0 auto;   /* center container */
     max-width: 900px;
 }
-
+ 
 .cert-card {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid #7cff7c;
@@ -353,7 +449,7 @@ body {
     width: 380px;
     flex: 1 1 300px; 
    
- transition: 0.3s;
+    transition: 0.3s;
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -377,26 +473,63 @@ body {
       font-size: 1.8rem;
     }
   }
-
+ 
 .cert-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px #7cff7c;
 }
-
+ 
 .cert-card img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease; /* smooth zoom */
+    cursor: pointer; /* show it's clickable */
 }
-
+ 
 .cert-card img:hover {
     transform: scale(1.1); /* zoom effect */
 }
-
+ 
 .cert-card h3 {
     margin: 10px 0;
 }
+ .clickable-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.clickable-image:hover {
+  opacity: 0.8;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 .tech-stack {
     padding: 80px 20px;
