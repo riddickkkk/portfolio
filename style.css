@@ -324,6 +324,11 @@ body {
     text-align: center;
     padding: 80px 20px;
     color: #d8ffd8;
+    min-height: 100vh;       /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center content */
+    align-items: center;
 }
 
 .section-title {
@@ -345,7 +350,8 @@ body {
     border: 1px solid #7cff7c;
     border-radius: 15px;
     padding: 20px;
-    width: 280px;
+    width: 380px;
+    flex: 1 1 300px; 
    
  transition: 0.3s;
 }
@@ -392,10 +398,6 @@ body {
     margin: 10px 0;
 }
 
-.cert-card p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
 .tech-stack {
     padding: 80px 20px;
     text-align: center;
@@ -450,45 +452,7 @@ body {
     color: #caffdc;
     letter-spacing: 1px;
   }
-  .cert-card img {
-    width: 260px;      
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .cert-card {
-    width: 420px;            
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .cert-card img {
-    width: 100%;               
-    max-width: 380px;
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-  }
-  
-  
-  .cert-card img:hover {
-    transform: scale(1.05);
-  }
-  .modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.95); 
-}
-
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-}
+ 
 .contact-section {
     min-height: 100vh;
     display: flex;
@@ -619,6 +583,7 @@ body {
     padding: 20px;
     gap: 20px;
   }
+ 
   
   .about-section h2 {
     text-align: center;
