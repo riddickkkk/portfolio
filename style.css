@@ -554,13 +554,13 @@ body {
     margin-bottom: 50px;
   }
   
-  .tech-grid {
+ .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 30px;
     max-width: 900px;
     margin: auto;
-  }
+}
   
   @media (max-width: 600px) {
   .tech-grid {
@@ -569,14 +569,22 @@ body {
 }
 
   
-  .tech-item {
+ .tech-item {
     background: rgba(0, 255, 150, 0.05);
     border: 1px solid rgba(0, 255, 150, 0.2);
     border-radius: 15px;
+
+    height: 170px;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     transition: 0.3s;
     backdrop-filter: blur(10px);
-  }
+}
   
   .tech-item:hover {
     transform: translateY(-8px) scale(1.05);
@@ -586,15 +594,11 @@ body {
   .tech-item img {
     width: 45px;
     height: 45px;
-    margin-bottom: 10px;
-  }
+    margin-bottom: 15px;
+    object-fit: contain;
+}
   
-  .tech-item span {
-    display: block;
-    font-size: 13px;
-    color: #caffdc;
-    letter-spacing: 1px;
-  }
+
  
 .contact-section {
     min-height: 100vh;
@@ -631,62 +635,50 @@ body {
     margin-bottom: 40px;
   }
   
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-  }
-  
- 
-  .social-logo {
-    background: rgba(0, 255, 150, 0.05);
-    border: 1px solid rgba(0, 255, 150, 0.2);
-    border-radius: 15px;
-    padding: 25px;
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-    transition: 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 255, 150, 0.1);
-  }
-  
-  
-  .social-logo:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 150, 0.4);
-  }
-  
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
 
-  .linkedin-logo {
-    width: 200px;
-    height: 200px;
-  }
-  
- 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .github-logo {
-    width: 200px;
-    height: 200px;
-    background: rgba(0, 255, 150, 0.05);
-    border: 1px solid rgba(0, 255, 150, 0.2);
-    border-radius: 15px;
-    padding: 25px;
-    transition: 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 255, 150, 0.1);
-  }
-  
-  .github-logo:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 150, 0.4);
-  }
+.social-logo {
+  width: 180px;
+  height: 180px;
+  background: rgba(0, 255, 150, 0.05);
+  border: 1px solid rgba(0, 255, 150, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 255, 150, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-logo:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 150, 0.4);
+}
+
+
+.social-logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.github-logo img {
+  width: 100px; 
+}
+
+.linkedin-logo img {
+  width: 90px;
+}
+
   
   .contact-section {
     animation: fadeIn 1.2s ease-in-out;
