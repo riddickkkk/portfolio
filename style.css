@@ -564,7 +564,7 @@ body {
   
   @media (max-width: 600px) {
   .tech-grid {
-    gap: 50px;
+    gap: 30px;
   }
 }
 
